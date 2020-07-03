@@ -2,4 +2,5 @@
 
 token=$(get_token -u "$APIGEE_USER":"$APIGEE_PASSWORD" -m "$APIGEE_MFA" 2>/dev/null | tail -n 1)
 
-echo "::set-output name=token::add-mask::$token"
+echo "::set-output name=token::$token"
+echo "::add-mask::$token"
