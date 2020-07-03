@@ -7,15 +7,6 @@ branding:
   color: green
   icon: activity
 
-inputs:
-  username:
-    required: true
-    description: Apigee username/email
-
-  password:
-    required: true
-    description: Apigee password
-
 outputs:
   token:
     description: Apigee token
@@ -23,6 +14,3 @@ outputs:
 runs:
   using: docker
   image: Dockerfile
-  args:
-    - $${ inputs.username }}
-    - $${ inputs.password }}
