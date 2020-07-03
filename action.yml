@@ -1,0 +1,22 @@
+name: GitHub Actions Apigee token
+description: This action gets a token from Apigee for deploying proxy
+
+author: Jalal Hosseini
+
+branding:
+  color: green
+  icon: activity
+
+inputs:
+  username:
+    required: true
+    description: Apigee username/email
+    # default:
+
+outputs:
+  token:
+    description: Apigee token
+
+runs:
+  using: docker
+  image: Dockerfile
