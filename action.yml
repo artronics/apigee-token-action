@@ -11,7 +11,10 @@ inputs:
   username:
     required: true
     description: Apigee username/email
-    # default:
+
+  password:
+    required: true
+    description: Apigee password
 
 outputs:
   token:
@@ -20,3 +23,6 @@ outputs:
 runs:
   using: docker
   image: Dockerfile
+  args:
+    - $${ inputs.username }}
+    - $${ inputs.password }}
